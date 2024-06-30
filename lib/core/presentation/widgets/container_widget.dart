@@ -5,10 +5,11 @@ class ContainerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize=MediaQuery.of(context).size;
     return Container(
     
-      width: 200,
-      height: 150,
+      width:screenSize.width<460? screenSize.width*0.6:screenSize.width*0.40,
+      
       decoration: BoxDecoration(
         
         image:const DecorationImage(image: AssetImage('assets/Organic Grocery.png'),fit: BoxFit.fill),
